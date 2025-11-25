@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&family=Englebert&family=Press+Start+2P&family=Snowburst+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+
+    <title>Tamagotchi</title>
+    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">   
+</head>
+
+<body>
+    <button data-open-modal class="create-btn">Create Tamagotchi</button>
+
+        <dialog data-modal class="modal">
+            <div class="modal-content">
+                <h2>Create Tamagotchi</h2>
+                <p>( You can have up to a maximum of 4 Tamagotchi )</p>
+                <input type="text" placeholder="Enter name" id="tamagotchi-name">
+                <select id="tamagotchi-type">
+                    <option value="dragon">Dragon</option>
+                    <option value="monkey">Monkey</option>
+                    <option value="plant">Plant</option>
+                    <option value="penguin">Penguin</option>
+                    <option value="wolf">Wolf</option>
+                    <option value="stone">Stone</option>
+                    <option value="snake">Snake</option>
+                    <option value="robot">Robot</option>
+                    <option value="boy">Boy</option>
+                    <option value="helicopter">Helicopter</option>
+                    <option value="girl">Girl</option>
+                </select>
+
+                <div class="modal-buttons">
+                    <button onclick="closeModal()" class="cancel" data-close-modal>Cancel</button>
+                    <button onclick="createTamagotchi()" class="confirm">Confirm</button>
+                </div>
+            </div>
+        </dialog>
+
+<div class="console-container"></div>
+
+<div class="activity-log-container">
+    <h2>Activity Log</h2>
+    <div id="activity-log" class="activity-log"></div>
+</div>
+</body>
+</html>
